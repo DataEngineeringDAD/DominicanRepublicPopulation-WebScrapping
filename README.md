@@ -5,7 +5,7 @@ This project aims to represent the provinces of the Dominican Republic on a geog
 ## Data Used
 
 ### 1. GeoJSON File
-The **GeoJSON** file containing the geographic boundaries of the provinces was obtained from the National Geographic Institute of the Dominican Republic (IDERD), available on their [Geoportal](https://geoportal.iderd.gob.do/).
+The **GeoJSON** file containing the geographic boundaries of the provinces was obtained from [Cartography Vectors](https://cartographyvectors.com/map/1436-dominican-republic-with-regions).
 
 ### 2. DataFrame with Province Data
 The DataFrame contains the following fields:
@@ -35,16 +35,14 @@ We also provide an option to display an interactive map using `folium`. This map
    ```bash
    pip install pandas geopandas matplotlib folium shapely
 
-## Usage
+### Usage
 
-1. Load the provided GeoJSON file or download it from the IDERD Geoportal.
-2. Create a DataFrame with the columns province, latitude, longitude, and population.
-4. Run the script that will load the data and generate the choropleth or interactive map.
+1. **Load the GeoJSON file**: Use the provided GeoJSON file or download it from [Cartography Vectors](https://cartographyvectors.com/map/1436-dominican-republic-with-regions).
+2. **Create a DataFrame**: The DataFrame should include the columns `province`, `latitude`, `longitude`, and `population`.
+3. **Run the Script**: Execute the script, which will handle data loading and visualization to generate a choropleth or an interactive map.
 
-## Conclusion
-This project allows for the geographic visualization of the provinces of the Dominican Republic and their associated data in a visually appealing manner, offering both static and interactive options.
+### Conclusion
 
-## Credits
-- Geospatial Data: Geoportal IDERD
-- Code and Analysis: David Acosta Diaz
+This project provides a clear and visually appealing representation of the Dominican Republic's provinces and their population data. The visualization can be adapted for both static and interactive displays, offering flexibility depending on the required output.
 
+It serves as a useful tool for understanding the demographic distribution of the Dominican Republic and can be extended to include additional socio-economic indicators or datasets for more comprehensive insights.
