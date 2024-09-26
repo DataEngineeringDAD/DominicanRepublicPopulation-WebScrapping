@@ -1,51 +1,50 @@
-# Visualización Geográfica de las Provincias de República Dominicana
+# Geographic Visualization of the Dominican Republic Provinces
 
-Este proyecto tiene como objetivo representar las provincias de la República Dominicana en un mapa geográfico, mostrando información relacionada con la población. Utilizamos datos geoespaciales en formato **GeoJSON** junto con un conjunto de datos tabular que incluye nombres de provincias, coordenadas y población.
+This project aims to represent the provinces of the Dominican Republic on a geographic map, displaying information related to population. We use geospatial data in **GeoJSON** format along with a tabular dataset that includes province names, coordinates, and population data.
 
-## Datos Utilizados
+## Data Used
 
-### 1. Archivo GeoJSON
-El archivo **GeoJSON** que contiene los límites geográficos de las provincias fue obtenido del Instituto Geográfico Nacional de la República Dominicana (IDERD), disponible en su [Geoportal](https://geoportal.iderd.gob.do/).
+### 1. GeoJSON File
+The **GeoJSON** file containing the geographic boundaries of the provinces was obtained from the National Geographic Institute of the Dominican Republic (IDERD), available on their [Geoportal](https://geoportal.iderd.gob.do/).
 
-### 2. DataFrame con Datos de las Provincias
-El DataFrame contiene los siguientes campos:
-- **Provincia**: Nombre de la provincia.
-- **Latitud y Longitud**: Coordenadas geográficas de la provincia.
-- **Población**: Población total de la provincia.
+### 2. DataFrame with Province Data
+The DataFrame contains the following fields:
+- **Province**: Name of the province.
+- **Latitude and Longitude**: Geographical coordinates of the province.
+- **Population**: Total population of the province.
 
-## Proceso
+## Process
 
-### 1. Carga de Datos
-Se cargan los datos del archivo **GeoJSON** utilizando `geopandas` y los datos del DataFrame con `pandas`.
+### 1. Data Loading
+The **GeoJSON** file is loaded using `geopandas`, and the DataFrame is loaded using `pandas`.
 
-### 2. Unión de los Datos
-Utilizamos el nombre de las provincias como clave para unir el **GeoDataFrame** del archivo **GeoJSON** con el DataFrame que contiene la población.
+### 2. Data Merging
+We use the province name as the key to merge the **GeoDataFrame** from the **GeoJSON** file with the DataFrame containing population data.
 
-### 3. Creación del Mapa Coroplético
-Generamos un mapa coroplético utilizando `geopandas` y `matplotlib`, donde cada provincia es coloreada según su población, empleando una escala de colores que va del naranja al rojo (`OrRd`).
+### 3. Creation of a Choropleth Map
+We generate a choropleth map using `geopandas` and `matplotlib`, where each province is colored according to its population, utilizing a color scale that ranges from orange to red (`OrRd`).
 
-### 4. Mapa Interactivo (Opcional)
-También ofrecemos una opción para visualizar un mapa interactivo utilizando `folium`. Este mapa muestra los puntos donde están ubicadas las provincias, y se pueden agregar marcadores para visualizar la población en cada una.
+### 4. Interactive Map (Optional)
+We also provide an option to display an interactive map using `folium`. This map shows the points where the provinces are located, and markers can be added to display the population of each province.
 
-## Cómo Ejecutar el Proyecto
+## How to Run the Project
 
-### Requisitos
+### Requirements
 1. Python 3.x
-2. Instalar las siguientes librerías:
+2. Install the following libraries:
    ```bash
    pip install pandas geopandas matplotlib folium shapely
 
-## Uso
+## Usage
 
-1. Cargar el archivo GeoJSON proporcionado o descargarlo del geoportal IDERD.
-2. Crear un DataFrame con las columnas provinces, latitude, longitude, y population.
-3. Ejecutar el script que cargará los datos y generará el mapa coroplético o interactivo.
+1. Load the provided GeoJSON file or download it from the IDERD Geoportal.
+2. Create a DataFrame with the columns province, latitude, longitude, and population.
+4. Run the script that will load the data and generate the choropleth or interactive map.
 
-##Conclusión
+## Conclusion
+This project allows for the geographic visualization of the provinces of the Dominican Republic and their associated data in a visually appealing manner, offering both static and interactive options.
 
-Este proyecto permite la visualización geográfica de las provincias de República Dominicana y sus datos asociados de manera visual y atractiva, con opciones tanto estáticas como interactivas.
+## Credits
+- Geospatial Data: Geoportal IDERD
+- Code and Analysis: David Acosta Diaz
 
-### Créditos
-
-- Datos geoespaciales: Geoportal IDERD
-- Código y análisis: David Acosta Diaz
